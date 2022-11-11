@@ -2,23 +2,25 @@ package PrimeNumber;
 
 import java.util.Scanner;
 
-public class TiilNnumber {
+public class FirstNprime1 {
     public static void main(String[] args) {
+
         System.out.println("Enter a number: ");
         Scanner s = new Scanner(System.in);
-        int num = s.nextInt();
-        int count = 0;
-        for (int i=2; i<= num; i++){
-            count = 0;
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    count = 1;
+        int n = s.nextInt();
+        int num = 2, i;
+        while (n > 0) {
+            for (i = 2; i < num; i++) {
+                if (num % i == 0) {
                     break;
                 }
             }
-            if (count==0) {
+            if (i == num) {
                 System.out.println(i);
+                n--;
             }
+            if(n == 0) break;
+            num++;
         }
     }
 }

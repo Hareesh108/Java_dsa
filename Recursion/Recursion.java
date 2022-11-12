@@ -16,10 +16,6 @@ public class Recursion {
         System.out.println(Addition(555));
 
         System.out.println(FibonacciNth(10));
-
-        int number = 1221;
-        int reverseNumber = Palindrome(number);
-        System.out.println(reverseNumber == number);
     }
 
     public static int Factorial(int num)
@@ -48,15 +44,5 @@ public class Recursion {
         if(num <= 1) return num;
         else return FibonacciNth(num-1) + FibonacciNth(num-2);
     }
-
-    public static int Palindrome(int num)
-    {
-        if (num == 0) return 0;
-
-        else return (num % 10 + Palindrome(num-1));
-    }
-
-
-
 
 }
